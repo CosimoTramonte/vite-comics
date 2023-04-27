@@ -16,22 +16,31 @@ export default {
   },
   data(){
     return{
-      
+
     }
   }
 }
 </script>
 
 <template>
+
+<div class="container">
   <Header/>
+</div>
   <Main/>
   <SectionMain/>
   <Footer/>
+
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
   @use "./scss/main.scss";
+
+  .container{
+    width: 80%;
+    margin: 0 auto;
+  }
 
 
 </style>
