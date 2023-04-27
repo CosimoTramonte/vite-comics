@@ -19,7 +19,7 @@ export default {
   <div class="header-container">
     <img src="../assets/img/dc-logo.png" alt="logo">
     <ul>
-      <li v-for="(li,index) in MenuNav" :key="index" class="active"><a href="#">{{ li.text }}</a></li>
+      <li v-for="(li,index) in MenuNav" :key="index" :class="{'active' : li.isActive}"><a href="#">{{ li.text }}</a></li>
     </ul>
   </div>
 
@@ -52,7 +52,7 @@ export default {
       height: 100%;
       border-bottom: 5px solid white;
 
-      &:hover {
+      &.active {
         border-bottom: 5px solid $primary-color;
         a{
           color: $primary-color;

@@ -59,7 +59,17 @@ export default {
 
   <div class="footerBottom-wrapper">
     <div class="footerBottom-container">
-    
+      <div class="button">
+        <span>SIGN-UP NOW!</span>
+      </div>
+      <div class="social">
+        <span>FOLLOW US</span>
+        <img src="../assets/img/footer-facebook.png" alt="facebook">
+        <img src="../assets/img/footer-twitter.png" alt="twitter">
+        <img src="../assets/img/footer-periscope.png" alt="periscope">
+        <img src="../assets/img/footer-youtube.png" alt="youtube">
+        <img src="../assets/img/footer-pinterest.png" alt="pinterest">
+      </div>
     </div>
   </div>
 
@@ -105,6 +115,10 @@ export default {
 
             li{
               margin: 5px 0;
+            
+            &:hover a{
+              color:white
+            }
 
               a{
                 color: #959595;
@@ -127,7 +141,39 @@ export default {
   }
   .footerBottom-wrapper{
     background-color: #303030;
-    min-height: 150px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    
+    .footerBottom-container{
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .button{
+        border: 1px solid $primary-color;
+        padding: 10px;
+        color: white;
+      }
+
+      .social{
+        display: flex;
+        align-items: center;
+
+        span{
+          color: $primary-color;
+          margin-right: 30px;
+          font-size: 20px;
+          font-weight: bold ;
+        }
+
+        img{
+          margin: 0 10px;
+        }
+      }
+    }
   }
 
 </style>

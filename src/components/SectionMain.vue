@@ -65,6 +65,12 @@ export default {
             height: 50px;
             margin-right: 8px;
           }
+
+          &:last-child{
+            img {
+              width: 60px;
+            } 
+          }
           
           a{
             text-decoration: none;
