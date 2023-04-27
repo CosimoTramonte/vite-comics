@@ -17,10 +17,10 @@ export default {
 <style lang="scss" scoped>
 
   @use "../scss/partials/utilities" as *;
+  @use "../scss/partials/mixin" as *;
 
   .main-container{
-    display: flex;
-    align-items: center;
+    @include centerFlex("vertical");
     background-color: $secondary-color;
     color: white;
     min-height: 150px;

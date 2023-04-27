@@ -38,10 +38,10 @@ export default {
 <style lang="scss" scoped>
 
   @use "../scss/partials/utilities" as *;
+  @use "../scss/partials/mixin" as *;
 
   .sectionmain-container{
-    display: flex;
-    align-items: center;
+    @include centerFlex("vertical");
     background-color: $primary-color;
     color: white;
     min-height: 150px;
@@ -51,15 +51,13 @@ export default {
       margin: 0 auto;
 
       ul{
-        display: flex;
-        align-items: center;
+        @include centerFlex("vertical");
         justify-content: space-around;
         flex-wrap: wrap;
         list-style: none;
 
         li{
-          display: flex;
-          align-items: center;
+          @include centerFlex("vertical");
 
           img{
             height: 50px;

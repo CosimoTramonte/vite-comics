@@ -79,6 +79,7 @@ export default {
 <style lang="scss" scoped>
 
   @use "../scss/partials/utilities" as *;
+  @use "../scss/partials/mixin" as *;
 
   .footerTop-wrapper{
     background-image: url("../assets/img/footer-bg.jpg");
@@ -142,14 +143,12 @@ export default {
   .footerBottom-wrapper{
     background-color: #303030;
     min-height: 100px;
-    display: flex;
-    align-items: center;
+    @include centerFlex("vertical");
     
     .footerBottom-container{
       width: 80%;
       margin: 0 auto;
-      display: flex;
-      align-items: center;
+      @include centerFlex("vertical");
       justify-content: space-between;
 
       .button{
@@ -159,8 +158,7 @@ export default {
       }
 
       .social{
-        display: flex;
-        align-items: center;
+        @include centerFlex("vertical");
 
         span{
           color: $primary-color;

@@ -27,11 +27,11 @@ export default {
 
 <style lang="scss" scoped>
   @use "../scss/partials/utilities" as *;
+  @use "../scss/partials/mixin" as *;
 
   .header-container{
-    display: flex;
+    @include centerFlex("vertical");
     justify-content: space-between;
-    align-items: center;
     height: 100px;
 
     img{
@@ -40,14 +40,12 @@ export default {
     }
 
     ul{
-      display: flex;
-      align-items: center;
+      @include centerFlex("both");
       height: 100%;
 
       li {
       list-style: none;
-      display: flex;
-      align-items: center;
+      @include centerFlex("vertical");
       padding: 10px;
       height: 100%;
       border-bottom: 5px solid white;
