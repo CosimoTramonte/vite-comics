@@ -8,7 +8,9 @@ export default {
 
   <div class="main-container">
     <div class="card-container">
-      <h1> ---\ Content goes here /--- </h1>
+      <div class="tag-series">
+        <span>CURRENT SERIES</span>
+      </div>
     </div>
   </div>
   
@@ -28,6 +30,14 @@ export default {
     .card-container{
       width: 80%;
       margin: 0 auto;
+      position: relative;
+
+      .tag-series{
+        position: absolute;
+        background-color: $primary-color;
+        padding: 10px;
+        bottom: 55px;
+      }
     }
   }
 
