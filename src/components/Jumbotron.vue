@@ -6,7 +6,9 @@ export default {
 </script>
 
 <template>
-  <div class="jumbo"></div>
+  <div class="jumbo">
+    <img src="../assets/img/jumbotron.jpg" alt="jumbo">
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -14,11 +16,13 @@ export default {
     @use "../scss/partials/utilities" as *;
 
     .jumbo{
-        width: 100vw;
+        width: 100%;
         height: 400px;
-        background-image: url("../assets/img/jumbotron.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+        }
     }
 
 </style>
