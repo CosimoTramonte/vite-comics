@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
     .serie{
         width: calc(100% / 6 - 20px);
-        aspect-ratio: 1/1;
+        aspect-ratio: 2/3;
         display: inline-block;
         margin-bottom: 30px;
 
@@ -32,7 +32,7 @@ export default {
             img{
                 width: 100%;
                 height: 100%;
-                object-fit: contain;
+                object-fit: cover;
             }
         }
 
