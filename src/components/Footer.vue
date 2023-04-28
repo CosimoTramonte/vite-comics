@@ -1,6 +1,14 @@
 <script>
+import { MenuFooter } from "../data/data.js"
+
 export default {
-    name: "Footer"
+    name: "Footer",
+
+    data(){
+      return{
+        MenuFooter
+      }
+    }
 }
 </script>
 
@@ -11,45 +19,32 @@ export default {
         <div class="col">
           <h4>DC COMICS</h4>
           <ul>
-            <li><a href="#">Characters</a></li>
-            <li><a href="#">Comics</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">News</a></li>
+            <li v-for="(li,index) in MenuFooter.DcComics" :key="index">
+              <a :href="li.href">{{ li.text }}</a>
+            </li>
           </ul>
 
           <h4>SHOP</h4>
           <ul>
-            <li><a href="#">Shop DC</a></li>
-            <li><a href="#">Shop DC Collectibles</a></li>
+            <li v-for="(li,index) in MenuFooter.Shop" :key="index">
+              <a :href="li.href">{{ li.text }}</a>
+            </li>
           </ul>
         </div>
         <div class="col">
           <h4>DC</h4>
           <ul>
-            <li><a href="#">Characters</a></li>
-            <li><a href="#">Comics</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Games</a></li>
-            <li><a href="#">Videos</a></li>
-            <li><a href="#">News</a></li>
+            <li v-for="(li,index) in MenuFooter.Dc" :key="index">
+              <a :href="li.href">{{ li.text }}</a>
+            </li>
           </ul>
         </div>
         <div class="col">
-          <h4>DC COMICS</h4>
+          <h4>SITES</h4>
           <ul>
-            <li><a href="#">Characters</a></li>
-            <li><a href="#">Comics</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">TV</a></li>
-            <li><a href="#">Games</a></li>
+            <li v-for="(li,index) in MenuFooter.Site" :key="index">
+              <a :href="li.href">{{ li.text }}</a>
+            </li>
           </ul>
         </div>
       </div>

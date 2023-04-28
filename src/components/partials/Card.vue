@@ -38,6 +38,7 @@ export default {
 
         h5{
             padding: 10px 0;
+            height: 10%;
             text-align: center;
         }
     }
